@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Header from "../components/layout/_header";
-import Drawer from "./drawer";
+import Image from "next/image";
 
 export default function Account() {
     const [isOpen, setIsOpen] = useState(false);
@@ -132,7 +132,7 @@ export default function Account() {
                                         <div className={openTab === 3 ? "block" : "hidden"} id="link3">
                                             <div className="flex">
                                                 <div className="w-2/3 flex">
-                                                    <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px'}} />
+                                                    <Image width={30} height={35} src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px'}} />
                                                     <p className="text-2xl font-bold pl-2">Total tokens: 1000</p>
                                                 </div>
                                                 <div className="w-1/3 flex justify-end">
@@ -152,7 +152,7 @@ export default function Account() {
                     {/* Img Col */}
                     <div className="w-full lg:w-2/5">
                         {/* Big profile image for side bar (desktop)  */}
-                        <img src="/assets/images/account/user.jpg" className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
+                        <Image width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} alt="user" src="/assets/images/account/user.jpg" className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block" />
                         {/* Image from: http://unsplash.com/photos/MP0IUfwrn0A  */}
 
                     </div>

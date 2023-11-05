@@ -54,32 +54,32 @@ export default function Drawer({ isOpen, setIsOpen }: DrawerProps) {
           <p className="text-2xl text-center text-white pt-10">How many tokens do you want to buy?</p>
           <div className="flex justify-between p-5">
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">50</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">100</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">150</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">200</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">250</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">500</p>
             </div>
           </div>

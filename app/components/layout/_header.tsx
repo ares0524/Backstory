@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 type HeaderProps = {
     isLoggedIn: boolean
 }
@@ -11,7 +13,7 @@ export default function Header({isLoggedIn}: HeaderProps) {
         <nav className="z-10 bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 w-full fixed">
             <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                 <a href="http://localhost:3000" className="flex items-center">
-                    <img src="/assets/images/logo.png" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                    <Image src="/assets/images/logo.png" width={60} height={35} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
                     <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Backstory</span>
                 </a>
                 <div className={"flex items-center lg:order-2 " + (isLoggedIn?"hidden":"block")}>
@@ -25,7 +27,7 @@ export default function Header({isLoggedIn}: HeaderProps) {
                 </div>
 
                 <div className={"flex items-center lg:order-2 " + (isLoggedIn?"block":"hidden")}>
-                    <a href="/library"><img src="/assets/images/header/library.png" alt="Library" width={25} className="mr-4 cursor-pointer" /></a>
+                    <a href="/library"><Image src="/assets/images/header/library.png" alt="Library" width={25} height={25} className="mr-4 cursor-pointer" /></a>
                     <form className="pr-4">   
                         <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                         <div className="relative">
@@ -39,7 +41,7 @@ export default function Header({isLoggedIn}: HeaderProps) {
                         </div>
                     </form>
                     <div className="flex pr-4">
-                        <img src="/assets/images/header/coin.png" alt="Coin" width={25} />
+                        <Image src="/assets/images/header/coin.png" alt="Coin" width={25} height={28} />
                         <p className="text-xl items-center font-bold ml-2">1000</p>
                     </div>
                     {/* <button data-collapse-toggle="mobile-menu-2" type="button" className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -47,7 +49,7 @@ export default function Header({isLoggedIn}: HeaderProps) {
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
                         <svg className="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                     </button> */}
-                    <a href="/account"><img src="/assets/images/account/user.jpg" className="rounded-full border-2" alt="User avatar" width={40} style={{objectFit:'cover', height:'40px'}} /></a>
+                    <a href="/account"><Image src="/assets/images/account/user.jpg" className="rounded-full border-2" alt="User avatar" height={40} width={40} style={{objectFit:'cover', height:'40px'}} /></a>
                 </div>
                 {/* <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                     <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">

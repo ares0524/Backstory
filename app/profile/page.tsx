@@ -86,8 +86,7 @@ export default function Dashboard() {
                 </div>
             </div>
 
-            <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-            </Drawer>
+            <Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
 
             {/* <div className="pt-[100px] min-h-screen fixed z-10">
             </div> */}

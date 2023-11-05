@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <>
         <a href="http://localhost:3000" className="flex items-center auth-logo">
-            <img src="/assets/images/logo.png" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+            <Image width={60} height={35} src="/assets/images/logo.png" className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Backstory</span>
         </a>
 
@@ -70,7 +70,7 @@ export default function Login() {
                     </div>
 
                     <p className="mt-4 text-sm text-center text-[#dddddd]">
-                        Don't have an account?{" "}
+                        Don&apos;t have an account?{" "}
                         <Link
                             href="/register"
                             className="font-medium text-blue-600 hover:underline"
