@@ -1,11 +1,40 @@
 import Image from "next/image";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+import CheckoutForm from "@/utiliz/checkout/checkoutForm";
+import { useEffect, useState } from "react";
 
 type DrawerProps = {
     isOpen: boolean;
     setIsOpen: (isOpen: boolean) => void;
 }
 
+const stripePromise = loadStripe('pk_test_51O7iZSKKxegAdYfWVGA8bfiXfcpnIt0cHVweX8SgFV28oPHVO8UVtaGKCGtPKpJ0fv1rF0QeP1hb583mbrfO9sde00lg3O3jHK');
+
 export default function Drawer({ isOpen, setIsOpen }: DrawerProps) {
+  const [clientSecret, setClientSecret] = useState("");
+
+  useEffect(() => {
+    // Create PaymentIntent as soon as the page loads
+    fetch("http://localhost:5000/stripe/create-payment-intent", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
+    })
+      .then((res) => res.json())
+      .then((data) => setClientSecret(data.clientSecret));
+  }, []);
+  
+  const appearance = {
+    theme: 'stripe'
+  }
+  
+  const options = {
+    clientSecret,
+    appearance
+  }
+
   return (
     <main
       className={
@@ -21,15 +50,44 @@ export default function Drawer({ isOpen, setIsOpen }: DrawerProps) {
           (isOpen ? " translate-x-0 " : " translate-x-full ")
         }
       >
-        {/* <article className="relative w-screen max-w-lg pb-10 flex flex-col space-y-6 overflow-y-scroll h-full"> */}
-          {/* <header className="p-4 font-bold text-lg">Header</header> */}
-        {/* </article> */}
         <div className="py-5 px-5">
-            <Image src='/assets/images/dashboard/1.png' alt="Sidebar Image" width={400} height={200} className="dashboard-slide-image m-auto mt-5" />
-            <p className="text-2xl text-center mt-5">Lorem ipsum dolor sit amet</p>
-            <p className="text-lg mt-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+          <p className="text-2xl text-center text-white pt-10">How many tokens do you want to buy?</p>
+          <div className="flex justify-between p-5">
+            <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
+              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <p className="text-2xl text-center text-white">50</p>
+            </div>
+
+            <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
+              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <p className="text-2xl text-center text-white">100</p>
+            </div>
+
+            <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
+              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <p className="text-2xl text-center text-white">150</p>
+            </div>
+
+            <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
+              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <p className="text-2xl text-center text-white">200</p>
+            </div>
+
+            <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
+              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <p className="text-2xl text-center text-white">250</p>
+            </div>
+
+            <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
+              <img src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <p className="text-2xl text-center text-white">500</p>
+            </div>
+          </div>
+            {clientSecret && (
+              <Elements stripe={stripePromise}>
+                <CheckoutForm />
+              </Elements>
+            )}
         </div>
       </section>
       <section
