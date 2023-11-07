@@ -18,7 +18,7 @@ export default function Dashboard() {
             <Header isLoggedIn={true} />
 
             <div className="pt-[100px] pb-[50px] px-[50px] min-h-screen">
-                <p className="font-2xl py-2">Your Library</p>
+                <p className="font-2xl py-2 text-white">Your Library</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
                     <div onClick={() => setIsOpen((isOpen) => !isOpen)}>
                         <Image src='/assets/images/dashboard/1.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />

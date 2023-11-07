@@ -63,7 +63,6 @@ export default function Dashboard() {
 
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-                    dir="rtl"
                     spaceBetween={10}
                     slidesPerView={8}
                     loop={true}
