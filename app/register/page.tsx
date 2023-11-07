@@ -6,7 +6,7 @@ export default function Login() {
 
   return (
     <>
-        <a href="http://localhost:3000" className="flex items-center auth-logo">
+        <a href="#" className="flex items-center auth-logo">
             <Image src="/assets/images/logo.png" width={60} height={35} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Backstory</span>
         </a>
@@ -57,11 +57,11 @@ export default function Login() {
                             htmlFor="confirmPassword"
                             className="block font-bold text-[#dddddd]"
                         >
-                            Password Confirm
+                            Confirm Password
                         </label>
                         <input
                             id="confirmPassword"
-                            type="confirmPassword"
+                            type="password"
                             placeholder="Confirm your password"
                             className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200"
                             required

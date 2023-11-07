@@ -10,11 +10,11 @@ export default function Home() {
         
         <div className='flex flex-col w-full md:flex-row justify-center'>
           <div className='flex w-3/5'>
-            <div className="flex relative place-items-center justify-center before:absolute before:h-[400px] before:w-[680px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+            <div className="flex relative place-items-center justify-center before:absolute before:h-[400px] before:w-[680px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:bg-gradient-to-br before:from-transparent before:to-blue-700 before:opacity-10 after:from-sky-900 after:via-[#0141ff] after:opacity-40 before:lg:h-[360px] z-[-1]">
               <div className='block justify-center p-2 pl-5'>
-                <p className='text-5xl font-bold'>Backstory is the world best novel reading platform.</p>
+                <p className='text-5xl font-bold'>Fantastic worlds, amazing stories all in one place</p>
                 <p className='text-lg mt-5'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  Immerse yourself in our fantastic worlds, with countless stories from hundreds of authors. Backstory is the place to read if you love fiction. Covering all genres from adventure to romance to crime thrillers fall in love with our characters and worlds.
                 </p>
               </div>
             </div>
