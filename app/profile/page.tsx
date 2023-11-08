@@ -1,6 +1,6 @@
 "use client"
 
-import Header from "./header";
+import Header from "../components/layout/_header"
 import { useState } from "react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import classNames from "classnames";
@@ -18,8 +18,24 @@ export default function Dashboard() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-            <Header />
+            <Header isLoggedIn={true} />
 
+            <div>
+                <nav className="z-10 border-gray-200 px-4 lg:px-10 py-2.5 bg-gray-800 w-full fixed flex">
+                    <div className="flex row w-1/2">
+                        <div className="flex">
+                            <Image src='/assets/images/profile/user.png' width={60} height={60} alt="User Avatar" className="rounded-full" />
+                        </div>
+                        <div className="flex items-center pl-3">
+                            <p className="text-3xl font-bold">Jhon Doe</p>
+                        </div>
+                    </div>
+                    <div className="flex w-1/2 justify-end items-center">
+                        <button type="button" className="text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 h-[40px]">Follow</button>
+                    </div>
+                </nav>
+            </div>
+            
             <div className="pt-[100px] pb-[50px] px-[50px] min-h-screen">
                 <p className="font-2xl py-2">24 Stories written by Jhon</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
