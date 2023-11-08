@@ -16,7 +16,7 @@ export default function Login() {
             <div className="flex flex-col items-center justify-center w-full md:w-1/4">
                 <div className="w-full max-w-md space-y-8">
                     <div>
-                        <h1 className="text-2xl font-bold">Welcome back!</h1>
+                        <h1 className="text-2xl font-bold text-white">Welcome back!</h1>
                         <p className="mt-2 text-gray-600">
                         Please sign in to your account.
                         </p>
@@ -51,7 +51,7 @@ export default function Login() {
                         </div>
                         <div>
                         <Link
-                            href="/forget"
+                            href="/reset"
                             className="text-xs text-blue-600 hover:underline"
                         >
                             Forget Password?
@@ -66,7 +66,7 @@ export default function Login() {
                     </form>
 
                     <div className="relative flex items-center justify-center w-full mt-6 border border-t">
-                        <div className="absolute px-5 bg-[#2f2f2f]">Or</div>
+                        <div className="absolute px-5 bg-[#2f2f2f] text-white">Or</div>
                     </div>
 
                     <p className="mt-4 text-sm text-center text-[#dddddd]">
