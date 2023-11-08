@@ -17,7 +17,7 @@ export default function Login() {
                 <div className="w-full max-w-md space-y-8">
                     <div>
                         <h1 className="text-2xl font-bold text-white">Welcome back!</h1>
-                        <p className="mt-2 text-gray-600">
+                        <p className="mt-2 text-white">
                         Please sign in to your account.
                         </p>
                     </div>
