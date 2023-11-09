@@ -36,7 +36,7 @@ export default function AuthorSidebar({ isOpen, setIsOpen }: DrawerProps) {
         </div>
       </section>
       <section
-        className=" w-screen h-full cursor-pointer "
+        className=" w-screen h-full cursor-pointer"
         onClick={() => {
           setIsOpen(false);
         }}

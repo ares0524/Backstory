@@ -1,22 +1,26 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import { authSlice } from "./authSlice";
-import { createWrapper } from "next-redux-wrapper";
+import { configureStore } from "@reduxjs/toolkit";
+import AuthSlice from "./auth/AuthSlice";
+import { combineReducers } from "redux";
+import {
+  useDispatch as useAppDispatch,
+  useSelector as useAppSelector,
+  TypedUseSelectorHook,
+} from "react-redux";
 
-const makeStore = () =>
-  configureStore({
-    reducer: {
-      [authSlice.name]: authSlice.reducer,
-    },
-    devTools: true,
-  });
+export const store = configureStore({
+  reducer: {
+    auth: AuthSlice,
+  },
+});
 
-export type AppStore = ReturnType<typeof makeStore>;
-export type AppState = ReturnType<AppStore["getState"]>;
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  AppState,
-  unknown,
-  Action
->;
+const rootReducer = combineReducers({
+  auth: AuthSlice,
+});
 
-export const wrapper = createWrapper<AppStore>(makeStore);
+export type AppState = ReturnType<typeof rootReducer>;
+export type AppDispatch = typeof store.dispatch;
+export const { dispatch } = store;
+export const useDispatch = () => useAppDispatch<AppDispatch>();
+export const useSelector: TypedUseSelectorHook<AppState> = useAppSelector;
+
+export default store;
