@@ -10,12 +10,18 @@ export default function Header({isLoggedIn}: HeaderProps) {
   return (
     <>
       <header>
+<<<<<<< HEAD
         <nav className="z-10 border-gray-200 px-4 lg:px-6 py-2.5 bg-gray-800 w-full fixed top-0">
+=======
+        <nav className="z-10 border-gray-200 px-4 lg:px-6 py-2.5 bg-gray-800 w-full fixed">
+          
+>>>>>>> 16c2bb7777959780937e1d79758a643c7dbd044f
             <div className="flex flex-wrap justify-between items-center mx-auto">
                 <a href="#" className="flex items-center">
                     <Image src="/assets/images/logo.png" width={60} height={35} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
                     <span className="self-center text-xl font-semibold whitespace-nowrap text-white">Backstory</span>
                 </a>
+
                 <div className={"flex items-center lg:order-2 " + (isLoggedIn?"hidden":"block")}>
                     <a href="/login" className="text-white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800">Log in</a>
                     <a href="/register" className="text-white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800">Register</a>
