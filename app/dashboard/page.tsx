@@ -24,122 +24,122 @@ export default function Dashboard() {
                 <Swiper
                     modules={[Pagination, Scrollbar, A11y, Autoplay]}
                     spaceBetween={10}
-                    slidesPerView={8}
+                    slidesPerView={6}
                     loop={true}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                 >
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/1.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/1.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/2.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/2.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/3.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/3.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/4.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/4.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/5.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/5.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/6.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/6.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/7.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/7.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/8.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/8.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/9.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/9.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/10.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/10.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                 </Swiper>
 
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                     spaceBetween={10}
-                    slidesPerView={8}
+                    slidesPerView={6}
                     loop={true}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                     className="mt-10"
                 >
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/10.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/10.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/9.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/9.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/8.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/8.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/7.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/7.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/6.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/6.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/5.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/5.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/4.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/4.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/3.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/3.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/2.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/2.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/1.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/1.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                 </Swiper>
 
                 <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                     spaceBetween={10}
-                    slidesPerView={8}
+                    slidesPerView={6}
                     loop={true}
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                     className="mt-10"
                 >
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/1.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/1.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/2.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/2.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/3.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/3.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/4.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/4.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/5.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/5.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/6.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/6.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/7.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/7.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/8.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/8.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/9.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/9.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                     <SwiperSlide onClick={() => setIsOpen((isOpen) => !isOpen)}>
-                        <Image src='/assets/images/dashboard/10.png' alt="Slide Image" width={400} height={200} className="dashboard-slide-image" />
+                        <Image src='/assets/images/dashboard/10.png' alt="Slide Image" width={200} height={400} className="dashboard-slide-image" />
                     </SwiperSlide>
                 </Swiper>
             </div>
