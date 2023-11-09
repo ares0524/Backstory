@@ -20,8 +20,8 @@ export default function Dashboard() {
         <div>
             <Header isLoggedIn={true} />
 
-            <div>
-                <nav className="z-10 border-gray-200 px-4 lg:px-10 py-2.5 bg-gray-800 w-full fixed flex">
+            <div className="mt-[50px]">
+                <nav className="z-10 border-gray-200 px-4 lg:px-10 py-2.5 bg-gray-800 w-full flex">
                     <div className="flex row w-1/2">
                         <div className="flex">
                             <Image src='/assets/images/profile/user.png' width={60} height={60} alt="User Avatar" className="rounded-full" />
@@ -36,7 +36,7 @@ export default function Dashboard() {
                 </nav>
             </div>
             
-            <div className="pt-[100px] pb-[50px] px-[50px] min-h-screen">
+            <div className="pt-[20px] pb-[50px] px-[50px] min-h-screen">
                 <p className="font-2xl py-2">24 Stories written by Jhon</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
                     <div onClick={() => setIsOpen((isOpen) => !isOpen)}>
