@@ -70,3 +70,10 @@ body {
 #submit:focus {
   outline: none;
 }
+
+.about-author-btn {
+  writing-mode: vertical-rl;
+  border-radius: 0 20px 20px 0;
+  position: fixed;
+  top: 40%;
+}
