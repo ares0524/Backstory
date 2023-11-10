@@ -5,23 +5,57 @@ import Link from "next/link";
 import { register } from "../store/auth/AuthSlice";
 import { useDispatch } from "../store/store";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
 
 export default function Register() {
     const dispatch = useDispatch();
 
     useEffect(() => {
+        // const data = {
+        //     first_name: 'Cal',
+        //     last_name: 'West',
+        //     email: 'admin@backstory.com',
+        //     password: 'rootroot'
+        // }
+
+        // dispatch(register(data));
+        document.getElementById('submit')?.addEventListener('click', userRegister);
+    }, [])
+
+    const userRegister = (e: Event) => {
+        e.preventDefault();
+        const first_name_el = document.getElementById('first_name') as HTMLInputElement;
+        const last_name_el = document.getElementById('last_name') as HTMLInputElement;
+        const email_el = document.getElementById('email') as HTMLInputElement;
+        const password_el = document.getElementById('password') as HTMLInputElement;
+        const confirm_pwd_el = document.getElementById('confirmPassword') as HTMLInputElement;
+
+        if (password_el.value != confirm_pwd_el.value) {
+            toast("Password doesn't match!", {
+                autoClose: 2000,
+                type: 'warning',
+                theme: 'dark'
+            })
+            return;
+        }
+
         const data = {
-            first_name: 'Cal',
-            last_name: 'West',
-            email: 'admin1@backstory.com',
-            password: 'rootroot'
+            first_name: first_name_el.value,
+            last_name: last_name_el.value,
+            email: email_el.value,
+            password: password_el.value
+        }
+
+        if (first_name_el.value == '' || last_name_el.value == '' || email_el.value == '' || password_el.value == '') {
+            toast('Please fill out all informations!', {
+                autoClose: 2000,
+                type: 'warning',
+                theme: 'dark'
+            })
+            return;
         }
 
         dispatch(register(data));
-    })
-
-    const userRegister = () => {
-        
     }
 
     return (
@@ -125,8 +159,9 @@ export default function Register() {
                             </Link>
                             <button
                                 type="submit"
+                                id="submit"
                                 className="w-full px-4 py-3 font-bold text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700"
-                                onClick={() => userRegister()}
+                                // onClick={() => userRegister()}
                             >
                                 Register
                             </button>
