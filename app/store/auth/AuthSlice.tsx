@@ -30,7 +30,7 @@ export const { setIsAuthenticated, setLoading } =
   AuthSlice.actions;
 
 export const register = (data: any) =>async (dispatch: AppDispatch) => {
-  axios.post('http://localhost:5000/user/register', data)
+  axios.post(process.env.SERVER_API + '/user/register', data)
   .then((res) => {
     if (res.data.status == 'fail') {
       toast('This user is already in use!', {
@@ -53,7 +53,7 @@ export const register = (data: any) =>async (dispatch: AppDispatch) => {
 }
 
 export const login = (data: any) =>async (dispatch:AppDispatch) => {
-  axios.post('http://localhost:5000/user/login', data)
+  axios.post(process.env.SERVER_API + '/user/login', data)
   .then((res) => {
     if (res.data.status == 'fail') {
       toast(res.data.msg, {

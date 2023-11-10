@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe, StripeElementsOptions  } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
 import CheckoutForm from "@/utiliz/checkout/checkoutForm";
@@ -10,7 +10,7 @@ type DrawerProps = {
     setIsOpen: (isOpen: boolean) => void;
 }
 
-const stripePromise = loadStripe('pk_test_51O7iZSKKxegAdYfWVGA8bfiXfcpnIt0cHVweX8SgFV28oPHVO8UVtaGKCGtPKpJ0fv1rF0QeP1hb583mbrfO9sde00lg3O3jHK');
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
 export default function Drawer({ isOpen, setIsOpen }: DrawerProps) {
   const [clientSecret, setClientSecret] = useState("");
@@ -84,7 +84,7 @@ export default function Drawer({ isOpen, setIsOpen }: DrawerProps) {
             </div>
           </div>
             {clientSecret && (
-              <Elements stripe={stripePromise} options={options}>
+              <Elements stripe={stripePromise} options={options as any}>
                 <CheckoutForm />
               </Elements>
             )}
