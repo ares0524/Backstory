@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
+import 'react-toastify/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +26,10 @@ function RootLayout({
         <link rel="stylesheet" href="/assets/images/logo.png" sizes='32*32' />
       </header> */}
       <Provider store={store}>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          {children}
+          <ToastContainer />
+        </body>
       </Provider>
     </html>
   )

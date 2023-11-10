@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "../components/layout/_header";
 import Image from "next/image";
+import Drawer from "./drawer";
 
 export default function Account() {
     const [isOpen, setIsOpen] = useState(false);
@@ -161,8 +162,7 @@ export default function Account() {
 
             </div>
 
-            {/* <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-            </Drawer> */}
+            <Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
         </>
     )
 }

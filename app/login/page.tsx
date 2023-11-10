@@ -1,7 +1,40 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { useDispatch } from "../store/store";
+import { login } from "../store/auth/AuthSlice";
 
 export default function Login() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        document.getElementById('submit')?.addEventListener('click', userLogin);
+    }, [])
+
+    const userLogin = (e: Event) => {
+        e.preventDefault();
+        const email_el = document.getElementById('email') as HTMLInputElement;
+        const password_el = document.getElementById('password') as HTMLInputElement;
+
+        const data = {
+            email: email_el.value,
+            password: password_el.value
+        }
+
+        if (email_el.value == '' || password_el.value == '') {
+            toast('Please fill out all informations!', {
+                autoClose: 2000,
+                type: 'warning',
+                theme: 'dark'
+            })
+            return;
+        }
+
+        dispatch(login(data));
+    }
+
   return (
     <>
         <a href="/" className="flex items-center auth-logo">
@@ -58,6 +91,7 @@ export default function Login() {
                         </Link>
                         <button
                             type="submit"
+                            id="submit"
                             className="w-full px-4 py-3 font-bold text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700"
                         >
                             Sign In

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe, StripeElementsOptions  } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
 import CheckoutForm from "@/utiliz/checkout/checkoutForm";
@@ -10,7 +10,7 @@ type DrawerProps = {
     setIsOpen: (isOpen: boolean) => void;
 }
 
-const stripePromise = loadStripe('pk_test_51O7iZSKKxegAdYfWVGA8bfiXfcpnIt0cHVweX8SgFV28oPHVO8UVtaGKCGtPKpJ0fv1rF0QeP1hb583mbrfO9sde00lg3O3jHK');
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
 
 export default function Drawer({ isOpen, setIsOpen }: DrawerProps) {
   const [clientSecret, setClientSecret] = useState("");
@@ -54,37 +54,37 @@ export default function Drawer({ isOpen, setIsOpen }: DrawerProps) {
           <p className="text-2xl text-center text-white pt-10">How many tokens do you want to buy?</p>
           <div className="flex justify-between p-5">
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" width={30} height={35} style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">50</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" width={30} height={35} style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">100</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" width={30} height={35} style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">150</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" width={30} height={35} style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">200</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" width={30} height={35} style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">250</p>
             </div>
 
             <div className="block border-gray-600 border-2 rounded-md p-3 hover:cursor-pointer">
-              <Image src="/assets/images/header/coin.png" alt="Coin" style={{width:'30px', height:'35px', margin: 'auto'}} />
+              <Image src="/assets/images/header/coin.png" alt="Coin" width={30} height={35} style={{width:'30px', height:'35px', margin: 'auto'}} />
               <p className="text-2xl text-center text-white">500</p>
             </div>
           </div>
             {clientSecret && (
-              <Elements stripe={stripePromise}>
+              <Elements stripe={stripePromise} options={options as any}>
                 <CheckoutForm />
               </Elements>
             )}
