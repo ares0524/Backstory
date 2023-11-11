@@ -67,9 +67,14 @@ export const login = (data: any) =>async (dispatch:AppDispatch) => {
         type: 'success',
         theme: 'dark'
       })
-      dispatch(setIsAuthenticated(true));
-      localStorage.setItem('JWT', res.data.token);
-      window.location.href = '/dashboard'      
+      const currentPath = window.location.toString();
+      if (currentPath.includes('stuff-page-login')) {
+        window.location.href = process.env.SUB_DOMAIN + '/dashboard?redirect_url=' + res.data.token;
+      } else {
+        dispatch(setIsAuthenticated(true));
+        localStorage.setItem('JWT', res.data.token);
+        window.location.href = '/dashboard'      
+      }
     }
   })
 }

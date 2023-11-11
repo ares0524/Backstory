@@ -12,7 +12,7 @@ export default function Login() {
     useEffect(() => {
         document.getElementById('submit')?.addEventListener('click', userLogin);
     }, [])
-
+    
     const userLogin = (e: Event) => {
         e.preventDefault();
         const email_el = document.getElementById('email') as HTMLInputElement;
