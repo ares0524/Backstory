@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { AppDispatch } from "../store";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Cookies from 'js-cookie';
 
 interface StateType {
   isAuthenticated: boolean;
@@ -72,7 +73,8 @@ export const login = (data: any) =>async (dispatch:AppDispatch) => {
         window.location.href = process.env.SUB_DOMAIN + '/dashboard?redirect_url=' + res.data.token;
       } else {
         dispatch(setIsAuthenticated(true));
-        localStorage.setItem('JWT', res.data.token);
+        // localStorage.setItem('JWT', res.data.token);
+        Cookies.set('token', res.data.token, {expires: 1, secure: true})
         window.location.href = '/dashboard'      
       }
     }
